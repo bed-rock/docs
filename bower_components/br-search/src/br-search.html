@@ -1,0 +1,62 @@
+<link rel="import" type="html" href="../../polymer/polymer.html">
+<link rel="import" type="html" href="../../br-select-box/src/br-select-box.html">
+
+<dom-module id="br-search">
+
+  <style>
+    :host {
+      display: flex;
+      position: relative;
+      width: 100%;
+    }
+    .search--input {
+      padding: 0 1rem;
+      flex-grow: 0;
+    }
+  </style>
+
+<template>
+
+  <button class="btn__search" on-click="open">
+    <br-icons icon="br-icons:search"></br-icons>
+  </button>
+
+  <input type="text" class="input__search" placeholder="Busque por um cliente para visualizar sua carteira">
+
+  <br-select-box>
+
+    <input type="text" class="search--input" placeholder="Busque por um cliente para visualizar sua carteira">
+
+    <!-- <ul class="list">
+      <template is="dom-repeat" items="{{options}}">
+        <li>
+          <a href="{{item.link}}">{{item.label}}</a>
+        </li>
+      </template>
+    </ul> -->
+
+  </br-select-box>
+
+</template>
+
+<script>
+  Polymer({
+    is: 'br-search',
+
+    properties: {
+      options: {
+        type: Array,
+        value: []
+      }
+    },
+
+    open: function(event) {
+      event.stopPropagation();
+      this.$$('br-select-box').classList.add('open');
+      this.$$('input').classList.add('visible');
+    }
+
+  });
+</script>
+
+</dom-module>

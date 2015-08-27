@@ -1,0 +1,56 @@
+:host {
+  position: relative;
+}
+
+.apps-list {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  padding: 2rem 1.5rem;
+  overflow: auto;
+  list-style-type: none;
+  background: #fff;
+}
+@media (min-width: 769px) {
+  .apps-list {
+    width: 288px;
+  }
+}
+
+.apps-list--item {
+  width: 33.33%;
+}
+
+.apps-list--link {
+  display: block;
+  padding: 0.5rem;
+  color: #666;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  overflow: hidden;
+  text-decoration: none;
+}
+.apps-list--link:hover, .apps-list--link:focus, .apps-list--link:active {
+  border-color: #e6e6e6;
+}
+
+.apps-list--icon {
+  display: block;
+  margin: 0 auto;
+  width: 64px;
+  height: 64px;
+}
+
+.apps-list--text {
+  display: block;
+  font-size: 0.85rem;
+  height: 16px;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

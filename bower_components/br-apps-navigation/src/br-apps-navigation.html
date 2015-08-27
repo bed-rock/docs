@@ -1,0 +1,53 @@
+<link rel="import" type="html" href="../../polymer/polymer.html">
+<link rel="import" type="html" href="../../br-select-box/src/br-select-box.html">
+<link rel="import" type="html" href="../../br-icons/src/br-icons.html">
+
+<dom-module id="br-apps-navigation">
+<link rel="import" type="css" href="../dist/css/br-apps-navigation.min.css">
+
+<template>
+
+  <br-icons icon="{{icon}}"></br-icons>
+
+  <br-select-box class$="{{position}}">
+
+  <ul class="apps-list">
+    <template is="dom-repeat" items="{{options}}">
+      <li class="apps-list--item">
+        <a id={{item.id}} class="apps-list--link" href="{{item.link}}">
+          <img class="apps-list--icon" src="{{item.img}}"/>
+          <span class="apps-list--text">{{item.text}}</span>
+        </a>
+      </li>
+    </template>
+  </ul>
+
+</br-select-box>
+
+</template>
+
+<script>
+  Polymer({
+    is: 'br-apps-navigation',
+
+    properties: {
+      options: {
+        type: Array,
+        value: []
+      },
+      icon: String,
+      position: String
+    },
+
+    listeners: {
+      'click': '_toggleSelect'
+    },
+
+    _toggleSelect: function(event) {
+      event.stopPropagation();
+      Polymer.dom(this.root).querySelector('br-select-box').classList.toggle('open');
+    }
+  });
+</script>
+
+</dom-module>

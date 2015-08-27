@@ -1,0 +1,215 @@
+<link rel="import" type="html" href="../../polymer/polymer.html">
+<link rel="import" type="html" href="../../br-icons/src/br-icons.html">
+
+<dom-module id="br-input">
+
+  <script src="../../vanilla-masker/build/vanilla-masker.min.js"></script>
+
+  <template>
+    <div class="form_field" required$="{{required}}">
+      <template is="dom-if" if="{{icon}}">
+        <br-icons icon$="{{icon}}" class="icon"></br-icons>
+      </template>
+      <label for$="{{name}}">{{label}}</label>
+      <input type="text" id$="{{name}}" on-blur="_validate" on-keyup='_onKeyPress' maxlength$="{{max}}" required$="{{required}}">
+      <template is="dom-if" if="{{hasNotEmptyError}}"><p class="form_field--error">{{notEmptyErrorMessage}}</p></template>
+      <template is="dom-if" if="{{hasMinLengthError}}"><p class="form_field--error">{{minLengthErrorMessage}}</p></template>
+      <template is="dom-if" if="{{hasCustomError}}"><p class="form_field--error">{{customErrorMessage}}</p></template>
+    </div>
+  </template>
+
+  <script>
+
+    Polymer({
+      is: 'br-input',
+      properties: {
+
+        name: String,
+        format: String,
+        icon: String,
+        options: {
+          type: Object,
+          value: {}
+        },
+        formats: {
+          type: Object,
+          readOnly: true,
+          value: {
+            TEXT: 'TEXT',
+            NUMBER: 'NUMBER',
+            MONEY: 'MONEY',
+            DATEMONTH: 'DATEMONTH',
+            CPF: 'CPF',
+            CNPJ: 'CNPJ'
+          }
+        },
+        model: {
+          type: String,
+          notify: true
+        },
+        required: {
+          type: Boolean,
+          default: false
+        },
+        isValid: String,
+        min: Number,
+        max: Number,
+        notEmptyErrorMessage: String,
+        minLengthErrorMessage: String,
+        customErrorMessage: String,
+        hasNotEmptyError: {
+          type: Boolean,
+          readOnly: true,
+          default: false
+        },
+        hasMinLengthError: {
+          type: Boolean,
+          readOnly: true,
+          default: false
+        },
+        hasCustomError: {
+          type: Boolean,
+          readOnly: true,
+          default: false
+        },
+      },
+
+      /* -- Lifecycle ------------------------------------------------- */
+
+      ready: function() {
+        this._setInputMask();
+      },
+
+      /* -- Private Methods ------------------------------------------- */
+
+      _setInputMask: function() {
+
+         var inputName = this.$$('input');
+
+         switch(this.format.toUpperCase())
+         {
+          case this.formats.NUMBER:
+            this._toNumber(inputName);
+            break;
+          case this.formats.MONEY:
+            this._toMoney(inputName, this.options);
+            break;
+          case this.formats.DATEMONTH:
+            this._toDateMonth(inputName);
+            break;
+          case this.formats.CPF:
+            this._toCpf(inputName);
+            break;
+          case this.formats.CNPJ:
+            this._toCnpj(inputName);
+            break;
+          default:
+            break;
+
+        }
+      },
+
+      _toNumber: function(inputName) {
+        VMasker(inputName).maskNumber();
+      },
+
+      _toMoney: function(inputName, options) {
+        VMasker(inputName).maskMoney(options);
+      },
+
+      _toDateMonth: function(inputName) {
+        VMasker(inputName).maskPattern("99/9999");
+      },
+
+      _toCpf: function(inputName) {
+        VMasker(inputName).maskPattern("999.999.999-99");
+      },
+
+      _toCnpj: function(inputName) {
+        VMasker(inputName).maskPattern("99.999.999/9999-99");
+      },
+
+      _onKeyPress: function(e) {
+
+        this.$$('.form_field').classList.add('active');
+
+        var input = this.$$('input');
+
+        if(input.value.length === 0)
+          this.$$('.form_field').classList.remove('active');
+
+        this.model = e.target.value;
+
+        this._defaultValidation();
+      },
+
+      _validate: function() {
+        this._defaultValidation();
+        this._customValidation();
+      },
+
+      _defaultValidation: function() {
+
+        var input = this.$$('input');
+
+        this._validateNotEmpty(input);
+
+        this._validateMinLength(input);
+
+        var formField = this.$$('.form_field');
+
+        if (this.hasMinLengthError ||  this.hasCustomError){
+          formField.classList.add('is-invalid');
+          this.isValid = 'true';}
+        else{
+          formField.classList.remove('is-invalid');
+        }
+
+      },
+
+      _customValidation: function() {
+
+        if (this.isValid)
+          this._setHasCustomError(false);
+        else
+          this._setHasCustomError(true);
+
+        var formField = this.$$('.form_field');
+
+        if (this.hasMinLengthError || this.hasCustomError){
+          formField.classList.add('is-invalid');
+          this.isValid = 'true';}
+        else{
+          formField.classList.remove('is-invalid');
+        }
+
+      },
+
+      _validateNotEmpty: function(input) {
+
+        if(this.required && input.value.length === 0)
+          this._setHasNotEmptyError(true);
+        else
+          this._setHasNotEmptyError(false);
+
+      },
+
+      _validateMinLength: function(input) {
+
+        if ((this.format.toUpperCase() === this.formats.NUMBER
+          || this.format.toUpperCase() === this.formats.TEXT)
+          &&  input.value.length < this.min)
+        {
+          this._setHasMinLengthError(true);
+        }
+        else
+          this._setHasMinLengthError(false);
+      },
+
+
+     /* -- Public Methods -------------------------------------------- */
+
+   });
+  </script>
+
+</dom-module>

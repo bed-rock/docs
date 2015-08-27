@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>br-form demo</title>
+	<meta name="description" content="">
+
+  <link rel="stylesheet" href="../../bedrock/dist/css/style.css">
+
+  <!-- Mobile -->
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+
+  <!-- Web Components -->
+  <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="import" href="../src/br-form.html">
+</head>
+<body>
+
+
+<!--
+Usage:
+Tag: <brform></br-form>
+Attributes:
+  action: type String [form's action]
+  autocomplete: type String (on/off) 
+  method: type String [POST/GET]
+
+  This compoment inherits from br-input and br-button
+-->
+
+
+  <br-form action="" autocomplete="on" method="POST">
+<br-input
+    name="teste"
+    label="Input with icon"
+    format="number"
+    model="{{value}}"
+    min="3"
+    max="5"
+    is-valid="false"
+    not-empty-error-message="Este campo é obrigatório"
+    min-length-error-message="Este campo requer um mínimo de 3 caractéres"
+    custom-error-message="Deu erro na bagaça doida"
+    required
+    id="br-teste"
+    icon="br-icons:search"
+  ></br-input>
+
+  <br-input
+    name="sese"
+    label="Input without icon"
+    format="number"
+    model="{{value}}"
+    min="3"
+    max="5"
+    is-valid="false"
+    not-empty-error-message="Este campo é obrigatório"
+    min-length-error-message="Este campo requer um mínimo de 3 caractéres"
+    custom-error-message="Deu erro na bagaça doida"
+    required
+    ></br-input>
+    
+    <br-button disabled class="accent" label="Botão normal" ></br-button>
+  </br-form>
+
+</body>
+
+</html>

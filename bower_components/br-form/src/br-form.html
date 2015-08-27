@@ -1,0 +1,46 @@
+<link rel="import" type="html" href="../../polymer/polymer.html">
+<link rel="import" type="html" href="../../br-button/src/br-button.html">
+<link rel="import" type="html" href="../../br-input/src/br-input.html">
+
+
+<dom-module id="br-form">
+<link rel="import" type="css" href="../dist/css/br-form.css">
+
+<template>
+  <form action="{{action}}" autocomplete="{{autocomplete}}" method="{{method}}" on-keypress="_checkValidity">
+  
+    <content></content>
+    
+  </form>
+
+</template>
+
+<script>
+  Polymer({
+    is: 'br-form',
+
+    properties: {
+      action: String,
+      autocomplete: String,
+      method: String
+    },
+    _checkValidity: function () {
+      allBrInputElements = document.getElementsByTagName('br-input');
+      allTrue = false;
+      isSomeoneFalse = false;
+      for (var i = 0; i < allBrInputElements.length; i++) {
+        if (allBrInputElements[i].isValid == 'true') {
+          allTrue = true
+        } else{
+          isSomeoneFalse = true;
+        }
+      };
+      if (isSomeoneFalse == false && allTrue == true) {
+        var buttonSubmit = document.querySelector('br-button');
+        buttonSubmit.removeAttribute('disabled');
+      };
+    }
+  });
+</script>
+
+</dom-module>

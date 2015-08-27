@@ -1,0 +1,59 @@
+<link rel="import" type="html" href="../../polymer/polymer.html">
+<link rel="import" type="html" href="../../br-select-box/src/br-select-box.html">
+<link rel="import" type="html" href="../../br-icons/src/br-icons.html">
+
+<dom-module id="br-dropdown-list">
+<!-- <link rel="import" type="css" href="../dist/css/br-dropdown-list.css"> -->
+
+<template>
+
+  <template is="dom-if" if="{{label}}">{{label}}</template>
+
+  <template is="dom-if" if="{{icon}}">
+    <br-icons icon="{{icon}}"></br-icons>
+  </template>
+
+  <i class="icon-caret"></i>
+
+  <br-select-box class$="{{position}}">
+
+    <ul class="list">
+      <template is="dom-repeat" items="{{options}}">
+        <li>
+          <a href="{{item.link}}">{{item.label}}</a>
+        </li>
+      </template>
+    </ul>
+
+
+</br-select-box>
+
+</template>
+
+<script>
+  Polymer({
+    is: 'br-dropdown-list',
+
+    properties: {
+      options: {
+        type: Array,
+        value: []
+      },
+      label: String,
+      icon: String,
+      position: String
+    },
+
+    listeners: {
+      'click': '_toggleSelect'
+    },
+
+    _toggleSelect: function(event) {
+      event.stopPropagation();
+      Polymer.dom(this.root).querySelector('br-select-box').classList.toggle('open');
+    }
+
+  });
+</script>
+
+</dom-module>

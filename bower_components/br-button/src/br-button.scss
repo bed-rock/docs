@@ -1,0 +1,105 @@
+@import '../../bedrock/scss/variables';
+@import 'variables';
+
+:host, .btn {
+  position: relative;
+  // overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  padding: 0 $button-padding-horizontal;
+  height: $button-height;
+  line-height: $button-height;
+  color: $button-color;
+  text-align: left;
+  border: none;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  vertical-align: middle;
+  background: $button-background;
+  border-radius: $button-border-radius;
+  transition: $button-transition;
+  transform: scale(1);
+  user-select: none;
+  box-shadow: $button-box-shadow;
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
+
+  &:not(.btn-block) + &:not(.btn-block) {
+    margin-left: 0.5rem;
+  }
+
+  &:hover:not([disabled]),
+  &:focus:not(:active):not([disabled]) {
+    background-color: $button-background-hover;
+  }
+
+  &:active:not([disabled]) {
+    background-color: $button-background;
+    transform: scale(0.95);
+  }
+
+  &[disabled] {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+
+  &.small {
+    height: $button-height-small;
+    line-height: $button-height-small;
+    font-size: $button-font-small;
+
+    .icon {
+      --iron-icon-height: 16px;
+      --iron-icon-width: 16px;
+    }
+  }
+
+  &.large {
+    height: $button-height-large;
+    line-height: $button-height-large;
+    font-size: $button-font-large;
+
+    .icon {
+      --iron-icon-height: 32px;
+      --iron-icon-width: 32px;
+    }
+  }
+
+  &.primary {
+    color: $button-primary-color;
+    background-color: $button-primary-background;
+
+    &:hover:not([disabled]),
+    &:focus:not(:active):not([disabled]) {
+      background-color: $button-primary-background-hover;
+    }
+
+    &:active:not([disabled]) {
+      background-color: $button-primary-background;
+    }
+  }
+
+  &.accent {
+    color: $button-accent-color;
+    background-color: $button-accent-background;
+
+    &:hover:not([disabled]),
+    &:focus:not(:active):not([disabled]) {
+      background-color: $button-accent-background-hover;
+    }
+
+    &:active:not([disabled]) {
+      background-color: $button-accent-background;
+    }
+  }
+
+  .icon {
+    margin-right: 0.5em;
+  }
+
+}

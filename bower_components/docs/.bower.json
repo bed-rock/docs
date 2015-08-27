@@ -1,0 +1,14 @@
+{
+  "name": "docs",
+  "homepage": "https://github.com/bed-rock/docs",
+  "_release": "5fa7e3482f",
+  "_resolution": {
+    "type": "branch",
+    "branch": "develop",
+    "commit": "5fa7e3482fd3553b6173f89885392bd415e86537"
+  },
+  "_source": "git@github.com:bed-rock/docs.git",
+  "_target": "develop",
+  "_originalSource": "git@github.com:bed-rock/docs.git",
+  "_direct": true
+}

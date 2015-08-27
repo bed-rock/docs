@@ -1,0 +1,162 @@
+@media (max-width: 37em){
+  ul.menu-docs {
+    display: block;
+    flex-flow: none;
+    justify-content: none;
+  }
+  .menu-docs li {
+    text-align: center;
+    padding: 1rem;
+    list-style: none;
+  }
+}
+
+@media (min-width: 37em){
+  ul.menu-docs {
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    max-width: 30rem;
+    padding: 0;
+  }
+
+  .menu-docs li {
+    margin: auto;
+    list-style: none;
+    padding: 1rem;
+  }
+}
+
+.header-demo {
+  background-color: #445566;
+  padding: 1rem;
+}
+
+header img.logo {
+  width: 50%;
+  max-width: 20rem;
+  margin: 0 auto;
+  display: block;
+}
+
+.menu-docs li a {
+  color: #98aabb;
+  text-decoration: none;
+  transition: 1s;
+}
+
+.menu-docs li a:hover {
+  color: #778899;
+  transition: 1s;
+}
+
+.intro, div[id*="d-br-"] {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.intro h1 {
+  text-align: center;
+  color: #445566;
+  padding: 0 5%;
+  margin: 1rem 0;
+}
+
+.intro p, div[id*="d-br-"] .paragraph-content, .atributes {
+  text-align: justify;
+  font-size: 1.2rem;
+  font-weight: 300;
+  padding: 0 10%;
+  list-style-type: none;
+}
+
+.atributes li:before {
+  content: "·";
+  font-size:60px;
+  vertical-align:middle;
+  line-height:10px;
+  color: #445566;
+}
+
+h2, h3, h4 {
+  padding: 0 8%;
+  color: #445566;
+}
+
+.language {
+  max-width: 46rem;
+  margin: 0 auto;
+  line-height: 1.5;
+  background-color: #112222;
+  padding: 2rem;
+  color: #bbffbb;
+}
+
+
+.tag-red {
+  color: #e74c3c;
+}
+
+.content-blue {
+  color: #3498db;
+}
+
+.atribute-yellow {
+  color: #f1c40f;
+}
+
+.comment-gray {
+  color: #666;
+}
+
+hr {
+  color:#445566;
+}
+
+.demo {
+  margin: 2rem auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  max-width: 30rem;
+  border: 0.1rem solid #445566;
+  padding: 2rem;
+  border-radius: 1.2rem;
+  width: 90%;
+}
+
+.icon-modal .row br-icons {
+  padding: 1rem;
+}
+
+div[id*="d-br-"] .icons-description {
+  font-size: 1rem;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+a{
+  color: #445566;
+}
+
+.get-it {
+  background-color: #445566;
+  max-width: none;
+  margin: 0;
+  text-align: center;
+  padding: 3rem;
+  font-weight: 300;
+}
+
+.get-it h2 {
+  color: #fafafa;
+}
+.get-it h3 {
+  color: #98aabb;
+}

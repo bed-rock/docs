@@ -1,0 +1,119 @@
+:host {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 56px;
+      -ms-flex-preferred-size: 56px;
+          flex-basis: 56px;
+  background: #e6e6e6;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+:host ::content .group, :host ::content .group__left, :host ::content .group__center, :host ::content .group__right {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: 56px;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+}
+:host ::content .group__center {
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+:host ::content .logo {
+  display: none !important;
+}
+@media (min-width: 480px) {
+  :host ::content .logo {
+    display: -webkit-flex !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+}
+:host ::content .logo img {
+  display: block;
+  max-width: 100%;
+  max-height: 40px;
+}
+:host ::content .btn, :host ::content .logo, :host ::content .btn__search {
+  position: relative;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 56px;
+  padding: 0 1rem;
+  color: gray;
+  color: gray;
+  text-decoration: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+:host ::content .btn:hover, :host ::content .logo:hover, :host ::content .btn__search:hover {
+  color: #1a1a1a;
+  background: rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+@media (min-width: 769px) {
+  :host ::content .btn__search {
+    display: none !important;
+  }
+}
+:host ::content .input__search {
+  display: none;
+}
+@media (min-width: 769px) {
+  :host ::content .input__search {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+    margin: 0 1rem;
+    max-width: 600px;
+    height: 40px;
+    line-height: 40px;
+    text-indent: 1rem;
+    border-radius: 2px;
+    background: whitesmoke;
+    box-shadow: none;
+    transition: all 0.2s;
+  }
+  :host ::content .input__search:hover {
+    background: #fff;
+  }
+  :host ::content .input__search:focus {
+    background: #fff;
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "br-form",
+  "authors": [
+    "cbfranca <cleidsonbf@gmail.com>",
+    "marcelo-ribeiro <marceloribeiromidia@gmail.com>"
+  ],
+  "description": "a form  wrapper  built with polymer to use with br-input",
+  "main": "br-form.html",
+  "keywords": [
+    "webcomponents",
+    "polymer",
+    "bedrock",
+    "forms"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bedrock-base": "~1.0.0",
+    "br-button": "~1.0.0",
+    "br-input": "~1.0.0"
+  },
+  "homepage": "https://github.com/bed-rock/br-form",
+  "_release": "73a3eabb4a",
+  "_resolution": {
+    "type": "branch",
+    "branch": "develop",
+    "commit": "73a3eabb4ab0c6f95f8388514fdc8c6a82b819e9"
+  },
+  "_source": "git@github.com:bed-rock/br-form.git",
+  "_target": "develop",
+  "_originalSource": "git@github.com:bed-rock/br-form.git",
+  "_direct": true
+}
