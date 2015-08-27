@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>br-button</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="../../bedrock/dist/css/style.css">
+
+	<script src="../../webcomponentsjs/webcomponents-lite.min.js"></script>
+	<link rel="import" href="../src/br-button.html">
+
+</head>
+<body>
+
+	<div class="container">
+
+		<br><br>
+
+		<h1>br-button example</h1>
+
+<!--
+Usage:
+Tag: <br-apps-navigation></br-apps-navigation>
+Attributes:
+	button-check: Type: Boolean
+	Required: false
+
+	options: Type: Array
+	Description: Collection of object with key and value to populate
+	Required: true
+-->
+
+
+
+<br-button class="small" label="Botão pequeno" icon="br-icons:user"></br-button>
+<br-button label="Botão normal" icon="br-icons:user"></br-button>
+<br-button class="large" label="Botão grande" icon="br-icons:user"></br-button>
+<br-button label="Botão desabilitado" icon="br-icons:user" is-disabled></br-button>
+
+<br>
+<br>
+
+<br-button class="primary small" label="Botão pequeno" icon="br-icons:user"></br-button>
+<br-button class="primary" label="Botão normal" icon="br-icons:user" id="teste" is-loading></br-button>
+<br-button class="primary large" label="Botão grande" icon="br-icons:user"></br-button>
+<br-button class="primary" label="Botão desabilitado" icon="br-icons:user" is-disabled></br-button>
+
+<br>
+<br>
+
+<br-button class="accent small" label="Botão pequeno"></br-button>
+<br-button class="accent" label="Botão normal"></br-button>
+<br-button class="accent large" label="Botão grande"></br-button>
+<br-button class="accent" label="Botão desabilitado" is-disabled></br-button>
+
+</div>
+
+</body>
+</html>

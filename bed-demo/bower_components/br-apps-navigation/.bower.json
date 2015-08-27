@@ -1,0 +1,40 @@
+{
+  "name": "br-apps-navigation",
+  "version": "1.0.1",
+  "homepage": "https://github.com/bed-rock/br-apps-navigation",
+  "authors": [
+    "cbfranca <cleidsonbf@gmail.com>",
+    "marcelo-ribeiro <marceloribeiromidia@gmail.com>"
+  ],
+  "description": "A mobile-friendly select box web component with search and multi select built with polymer",
+  "main": "br-apps-navigation.html",
+  "keywords": [
+    "webcomponents",
+    "polymer",
+    "select",
+    "select2",
+    "bedrock"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bedrock-base": "~1.0.0",
+    "br-select-box": "~1.0.0",
+    "br-icons": "~1.0.0"
+  },
+  "_release": "1.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.0.1",
+    "commit": "55b551f4bc706204f8f3342b20e7aab3e720ea07"
+  },
+  "_source": "git://github.com/bed-rock/br-apps-navigation.git",
+  "_target": "~1.0.0",
+  "_originalSource": "br-apps-navigation"
+}

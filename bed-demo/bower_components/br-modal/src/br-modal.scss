@@ -1,0 +1,100 @@
+@import '../../bedrock-base/scss/variables';
+
+:host {
+  display: none;
+  position: relative;
+  user-select: none;
+  box-sizing: border-box;
+
+  &.open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    padding: 3.5rem 1rem;
+    background: rgba(#000,0.7);
+    width: 100%;
+  }
+
+  .modal {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: $screen-tablet;
+    max-height: 100%;
+    background-color: $body-bg;
+    border-radius: 0.2rem;
+    border: 2px solid $color-white-10;
+    box-shadow: -2px 3px 36px 0px $color-gray-dark;
+
+    animation-duration: 0.6s;
+    animation-fill-mode: both;
+    animation-name: slideInDown;
+
+    @media (min-width: $screen-desktop) {
+      width: $container-desktop;
+    }
+  }
+
+  .modal-header {
+    background-color: $color-white-10;
+    height: $input-height;
+  }
+
+  .controls {
+    display: flex;
+    justify-content: flex-end;
+    flex-shrink: 0;
+    height: $input-height;
+    line-height: $input-height;
+    align-items: stretch;
+    border-bottom: 1px solid $color-white-20;
+
+    button {
+      padding: 0 1rem;
+      color: $color-gray-light;
+      transition: $transition;
+
+      &:hover {
+        color: $color-gray;
+      }
+    }
+  }
+
+  .modal-body {
+    flex-grow: 1;
+    overflow-y: auto;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:1rem;
+  }
+}
+
+
+// Modal animate
+//
+@keyframes slideInDown {
+  0% {
+    opacity: 0;
+    //transform: translate3d(0,-100%,0);
+    transform: scale(0);
+    visibility: visible;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    //transform: translate3d(0,0,0);
+  }
+}

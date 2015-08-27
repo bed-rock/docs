@@ -1,0 +1,57 @@
+<title>Bedrock - Demo Website</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+
+<link rel="stylesheet" type="text/css" href="/bower_components/bedrock-base/dist/css/style.min.css"/>
+
+<link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<!-- WebComponents with Polymer -->
+<script src="/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+
+<!-- BedRock Components -->
+<link rel="import" href="/bower_components/br-apps-navigation/src/br-apps-navigation.html">
+
+<link rel="import" href="/bower_components/br-button/src/br-button.html">
+<link rel="stylesheet" href="/bower_components/br-button/dist/css/br-button.css">
+
+<link rel="import" href="/bower_components/br-dropdown-list/src/br-dropdown-list.html">
+
+<link rel="import" href="/bower_components/br-page-header/src/br-page-header.html">
+
+<link rel="import" href="/bower_components/br-select/src/br-select.html">
+
+<link rel="import" href="/bower_components/br-modal/src/br-modal.html">
+
+<link rel="import" href="/bower_components/br-input/src/br-input.html">
+
+<link rel="import" href="/bower_components/br-checkable/src/br-checkable.html">
+
+<link rel="import" href="/bower_components/br-form/src/br-form.html">
+
+<link rel="import" href="/bower_components/br-nav/src/br-nav.html">
+
+<link rel="import" href="/bower_components/br-header/src/br-header.html">
+
+<link rel="import" href="/bower_components/br-search/src/br-search.html">
+
+<link rel="import" href="/bower_components/br-page/src/br-page.html">
+
+<script type="text/javascript">
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+  </script>
