@@ -1,0 +1,29 @@
+{
+  "name": "br-page-header",
+  "version": "1.0.1",
+  "homepage": "https://github.com/bed-rock/br-page-header",
+  "authors": [
+    "cbfranca <cleidsonbf@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bedrock-base": "~1.0.0",
+    "br-icons": "~1.0.0"
+  },
+  "_release": "1.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.0.1",
+    "commit": "6582a78c2f3233cca4d972e9bd90149548eec659"
+  },
+  "_source": "git://github.com/bed-rock/br-page-header.git",
+  "_target": "~1.0.0",
+  "_originalSource": "br-page-header"
+}

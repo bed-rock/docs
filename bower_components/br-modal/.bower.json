@@ -24,14 +24,13 @@
     "bedrock-base": "*"
   },
   "homepage": "https://github.com/bed-rock/br-modal",
-  "_release": "4fdb379c41",
+  "_release": "378d5e554e",
   "_resolution": {
     "type": "branch",
     "branch": "develop",
-    "commit": "4fdb379c41f656732296c53db72f7733e23c1cc2"
+    "commit": "378d5e554ea2be5ee1d1c1c92d9fc4fbb2da0f7e"
   },
   "_source": "git@github.com:bed-rock/br-modal.git",
   "_target": "develop",
-  "_originalSource": "git@github.com:bed-rock/br-modal.git",
-  "_direct": true
+  "_originalSource": "git@github.com:bed-rock/br-modal.git"
 }

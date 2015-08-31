@@ -1,0 +1,60 @@
+<link rel="import" href="../../polymer/polymer.html">
+<link rel="import" href="../../br-icons/src/br-icons.html">
+
+<dom-module id="br-page-header">
+
+<link rel="import" type="css" href="../../br-icons/dist/css/br-icons.css">
+
+<style>
+  :host {
+    display: flex;
+    margin-bottom: 1em;
+  }
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin: 0;
+  }
+  .page_icon {
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+  }
+  .tooltip_icon {
+    color: #345;
+  }
+  :host abbr {
+    align-self: flex-end;
+    margin-left: 0.5rem;
+  }
+</style>
+
+<template>
+
+  <template is="dom-if" if="{{icon}}">
+    <br-icons icon$="{{icon}}" class="icon__lg  page_icon"></br-icons>
+  </template>
+
+  <h1>{{text}}</h1>
+
+  <template is="dom-if" if="{{tooltip}}">
+    <abbr>
+      <br-icons icon="br-icons:info" class="icon__sm  tooltip_icon" data-toggle="tooltip" data-title$="{{tooltip}}"></br-icons>
+    </abbr>
+  </template>
+
+</template>
+
+<script>
+  Polymer({
+    is: 'br-page-header',
+
+    properties: {
+      text: String,
+      icon: String,
+      tooltip: String
+    }
+
+  });
+</script>
+
+</dom-module>

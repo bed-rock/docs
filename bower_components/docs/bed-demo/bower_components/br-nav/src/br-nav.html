@@ -1,0 +1,113 @@
+<link rel="import" href="../../polymer/polymer.html">
+<link rel="import" href="../../br-icons/src/br-icons.html">
+
+<dom-module id="br-nav">
+
+<link rel="import" type="css" href="../dist/css/br-nav.css">
+
+<template>
+
+  <br-icons class="open-nav" icon="br-icons:menu"></br-icons>
+  <br-icons class="close-nav" icon="br-icons:arrow-back"></br-icons>
+
+  <div class="overlay"></div>
+
+  <nav class="page-nav">
+
+    <ul id="menu" class="menu js-menu">
+
+      <template is="dom-repeat" items="{{items}}">
+
+       <template is="dom-if" if="{{item.group}}">
+        <li class$="{{ _getCssClasses(item) }}">
+          <span>{{item.label}}</span><hr>
+          <ul class="submenu">
+            <template is="dom-repeat" items="{{item.submenu}}">
+              <li class="submenu--item">
+                <a href="{{item.link}}" class="submenu--link">{{item.label}}</a>
+              </li>
+            </template>
+          </ul>
+        </li>
+      </template>
+
+      <template is="dom-if" if="{{item.icon}}">
+        <li class$="{{ _getCssClasses(item) }}" on-click="_toggleSubmenu">
+          <a href="{{item.link}}" class="menu--link" title="{{item.label}}">
+            <div class="menu--icon" data-icon="{{item.icon}}">
+              <br-icons icon="{{item.icon}}"></br-icons>
+            </div>
+            <span class="menu--text">{{item.label}}</span>
+          </a>
+
+          <ul class="submenu">
+            <template is="dom-repeat" items="{{item.submenu}}">
+              <li class="submenu--item">
+                <a href="{{item.link}}" class="submenu--link">{{item.label}}</a>
+              </li>
+            </template>
+          </ul>
+        </li>
+      </template>
+
+      </template>
+    </ul>
+
+  </nav>
+
+</template>
+
+<script>
+  Polymer({
+    is: 'br-nav',
+
+    properties: {
+      items: {
+        type: Array,
+        value: []
+      }
+    },
+
+    listeners: {
+      'click': '_toggleMenu'
+    },
+
+    ready: function() {
+
+      var _this = Polymer.dom(this);
+
+      document.addEventListener('click', function() {
+        if (_this.classList.contains('page-nav__opened') && _this.classList !== null)
+          _this.classList.remove('page-nav__opened');
+      }, false);
+
+      var content = Polymer.dom(this.root).querySelector('.page-nav');
+      content.addEventListener('click', function(event) {
+        event.stopPropagation();
+      }, false);
+
+    },
+
+    _toggleMenu: function (event) {
+      event.stopPropagation();
+      Polymer.dom(this).classList.toggle('page-nav__opened');
+    },
+
+    _toggleSubmenu: function(e){
+      var menuItem = e.target.offsetParent;
+      menuItem.classList.toggle('menu--item__has_submenu__opened');
+    },
+
+    _getCssClasses: function(item) {
+      if(item.submenu)
+        return 'menu--item menu--item__has_submenu';
+      else if(item.group)
+        return 'menu--group';
+      else
+        return 'menu--item';
+    }
+
+  });
+</script>
+
+</dom-module>

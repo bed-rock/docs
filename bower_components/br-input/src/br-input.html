@@ -2,7 +2,12 @@
 <link rel="import" type="html" href="../../br-icons/src/br-icons.html">
 
 <dom-module id="br-input">
-
+  <style>
+    :host {
+      display: flex;
+      width: 100%;
+    }
+  </style>
   <script src="../../vanilla-masker/build/vanilla-masker.min.js"></script>
 
   <template>
@@ -51,7 +56,10 @@
           type: Boolean,
           default: false
         },
-        isValid: String,
+        isValid: {
+          type: Boolean,
+          default: false
+        },
         min: Number,
         max: Number,
         notEmptyErrorMessage: String,
@@ -160,9 +168,10 @@
 
         if (this.hasMinLengthError ||  this.hasCustomError){
           formField.classList.add('is-invalid');
-          this.isValid = 'true';}
+          }
         else{
           formField.classList.remove('is-invalid');
+          this.isValid = true;
         }
 
       },
@@ -178,9 +187,10 @@
 
         if (this.hasMinLengthError || this.hasCustomError){
           formField.classList.add('is-invalid');
-          this.isValid = 'true';}
+          }
         else{
           formField.classList.remove('is-invalid');
+          this.isValid = true;
         }
 
       },

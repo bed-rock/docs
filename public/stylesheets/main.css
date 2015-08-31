@@ -120,9 +120,9 @@ hr {
 
 .demo {
   margin: 2rem auto;
-  display: flex;
+ /* display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: space-around;*/
   max-width: 30rem;
   border: 0.1rem solid #445566;
   padding: 2rem;
@@ -154,7 +154,7 @@ a{
   font-weight: 300;
 }
 
-.get-it h2 {
+.get-it h2, .get-it a {
   color: #fafafa;
 }
 .get-it h3 {

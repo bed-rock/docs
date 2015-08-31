@@ -1,0 +1,33 @@
+{
+  "name": "bedrock-base",
+  "authors": [
+    "marcelo-ribeiro <marceloribeiromidia@gmail.com>",
+    "cbfranca <cleidsonbf@gmail.com>"
+  ],
+  "main": [
+    "scss/general.scss"
+  ],
+  "dependencies": {
+    "normalize.css": "~3.0.3",
+    "polymer": "Polymer/polymer#^1.0.7"
+  },
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "homepage": "https://github.com/bed-rock/bedrock",
+  "_release": "93e5e69a55",
+  "_resolution": {
+    "type": "branch",
+    "branch": "develop",
+    "commit": "93e5e69a55b24c66789ce35edc120ca1833566cf"
+  },
+  "_source": "git@github.com:bed-rock/bedrock.git",
+  "_target": "develop",
+  "_originalSource": "git@github.com:bed-rock/bedrock.git",
+  "_direct": true
+}

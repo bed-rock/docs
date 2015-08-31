@@ -1,0 +1,45 @@
+{
+  "name": "br-page",
+  "homepage": "https://github.com/bed-rock/br-page",
+  "authors": [
+    "cbfranca <cleidsonbf@gmail.com>",
+    "marcelo-ribeiro <marceloribeiromidia@gmail.com>"
+  ],
+  "description": "",
+  "main": "br-page.html",
+  "keywords": [
+    "webcomponents",
+    "polymer",
+    "bedrock"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bedrock-base": "~1.0.0",
+    "br-header": "~1.0.0",
+    "br-icons": "~1.0.0",
+    "br-nav": "~1.0.0",
+    "br-apps-navigation": "~1.0.0",
+    "br-button": "~1.0.0",
+    "br-page-header": "~1.0.0",
+    "br-search": "~1.0.0",
+    "br-input": "~1.0.0",
+    "br-dropdown-list": "~1.0.0"
+  },
+  "_release": "8ba60b3dbb",
+  "_resolution": {
+    "type": "branch",
+    "branch": "develop",
+    "commit": "8ba60b3dbbbd631bf01a9025a5f98fe6174c2626"
+  },
+  "_source": "git@github.com:bed-rock/br-page.git",
+  "_target": "develop",
+  "_originalSource": "git@github.com:bed-rock/br-page.git",
+  "_direct": true
+}

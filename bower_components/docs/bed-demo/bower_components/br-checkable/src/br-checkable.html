@@ -1,0 +1,44 @@
+<link rel="import" type="html" href="../../polymer/polymer.html">
+
+<dom-module id="br-checkable">
+
+  <template>
+
+    <template is="dom-if" if="{{checkbox}}">
+      <div class="form_field  checkbox">
+        <input type="checkbox" id$="{{label}}" required$="{{required}}">
+        <label for$="{{label}}">{{label}}</label>
+        <template is="dom-if" if="{{errorMessage}}">
+          <p class="form_field--error">{{errorMessage}}</p>
+        </template>
+      </div>
+    </template>
+
+    <template is="dom-if" if="{{radio}}">
+      <div class="form_field  radio">
+        <input type="radio" id$="{{label}}" name$="{{name}}" required$="{{required}}">
+        <label for$="{{label}}">{{label}}</label>
+        <template is="dom-if" if="{{errorMessage}}">
+          <p class="form_field--error">{{errorMessage}}</p>
+        </template>
+      </div>
+    </template>
+
+  </template>
+
+  <script>
+    Polymer({
+      is: 'br-checkable',
+
+      properties: {
+        label: String,
+        checkbox: Boolean,
+        radio: Boolean,
+        name: String, // Case radio group
+        required: Boolean,
+        errorMessage: String,
+      }
+    });
+  </script>
+
+</dom-module>

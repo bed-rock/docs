@@ -64,6 +64,7 @@
       cursor: pointer;
       background: none;
       border: none;
+      box-shadow: none;
 
       &:hover {
         color: darken( $header-link-color, 40% );

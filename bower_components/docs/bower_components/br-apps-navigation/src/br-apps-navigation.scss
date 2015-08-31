@@ -1,0 +1,57 @@
+@import '../../bedrock/scss/variables';
+@import 'variables';
+
+:host {
+  position: relative;
+}
+
+.apps-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem 1.5rem;
+  overflow: auto;
+  list-style-type: none;
+  background: #fff;
+
+  @media (min-width: $screen-tablet + 1) {
+    width: 288px;
+  }
+}
+
+.apps-list--item {
+  width: 33.33%;
+}
+
+.apps-list--link {
+  display: block;
+  padding: 0.5rem;
+  color: $color-gray;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  overflow: hidden;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: $color-white-10;
+  }
+}
+
+.apps-list--icon {
+  display: block;
+  margin: 0 auto;
+  width: 64px;
+  height: 64px;
+}
+
+.apps-list--text {
+  display: block;
+  font-size: 0.85rem;
+  height: 16px;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

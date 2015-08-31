@@ -1,0 +1,40 @@
+{
+  "name": "br-input",
+  "version": "1.0.2",
+  "homepage": "https://github.com/bed-rock/br-input",
+  "authors": [
+    "cbfranca <cleidsonbf@gmail.com>",
+    "marcelo-ribeiro <marceloribeiromidia@gmail.com>"
+  ],
+  "description": "A mobile-friendly input with many type of masks built with polymer",
+  "main": "br-input.html",
+  "keywords": [
+    "webcomponent",
+    "polymer",
+    "input",
+    "inputMask",
+    "vanillaMasker",
+    "bedrock"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bedrock-base": "~1.0.0",
+    "vanilla-masker": "~1.0.9"
+  },
+  "_release": "1.0.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.0.2",
+    "commit": "42ad550d84e7ad2bd4c07769f63caabf47957d58"
+  },
+  "_source": "git://github.com/bed-rock/br-input.git",
+  "_target": "~1.0.0",
+  "_originalSource": "br-input"
+}

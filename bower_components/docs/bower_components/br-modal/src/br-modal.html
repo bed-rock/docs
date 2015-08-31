@@ -1,0 +1,40 @@
+<link rel="import" type="html" href="../../polymer/polymer.html">
+<link rel="import" type="html" href="../../br-button/src/br-button.html">
+
+<dom-module id="br-modal">
+<link rel="import" type="css" href="../dist/css/br-modal.css">
+<template>
+  <div aria-hidden="true" class="modal">
+    <header class="modal-header">
+      <div class="controls">
+        <button on-click="_close">
+          <br-icons icon="br-icons:close"></br-icons>
+        </button>
+      </div>
+    </header>
+    <div class="modal-body">
+      <content id="body" select=".body">
+      </content>
+    </div>
+    <div class="modal-footer">
+      <content select=".footer">
+      </content>
+    </div>
+  </div>
+</template>
+
+<script>
+  Polymer({
+    is: 'br-modal',
+
+    _open: function(){
+      this.classList.add("open");
+    },
+    _close: function(){
+      this.classList.remove('open');
+    }
+
+  });
+</script>
+
+</dom-module>

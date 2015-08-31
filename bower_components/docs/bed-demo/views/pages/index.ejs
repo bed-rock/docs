@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/header.ejs %>
+
+</head>
+
+<body>
+
+ <header class="header-demo">
+  <img class="logo" src="/bower_components/docs/logo/logoBedrockBlue.jpg">
+  <nav>
+    <ul class="menu-docs">
+    <li><a href="#demo">Components</a></li>
+      <li><a href="#d-br-form">Form</a></li>
+      <li><a href="#d-br-page">Page</a></li>
+      <li><a href="#get-it">Get it</a></li>
+    </ul>
+  </nav>
+</header>
+<section class="intro">
+  <h1> Bedrock Docs</h1>
+  <p class="paragraph-content">Bedrock is a mobile friendly component Framework based on polymer 1.0. We provide the following custom elements ready to use.</p>
+
+  <p class="paragraph-content">Because our framework is build on the top of webcomponents, the webcomponents.min.js and polymer.html are required.</p>
+
+  <p class="paragraph-content">The webcomponents.js is placed in the head of your html document, before any Bedrock´s component.</p>
+  <div class="language">
+    <code>
+      <<span class="tag-red">script</span> <span class="atribute-yellow">src= </span>"/webcomponentsjs/ webcomponents-lite.min.js"> < /<span class="tag-red">script</span>>
+    </code>
+  </div>
+</section>
+<hr/>
+<section id="demo">
+  <div id="d-br-css-framework">
+    <h2>Bedrock CSS Framework</h2>
+    <p class="paragraph-content">A wrapper for our custom elements, that includes built in css reset, typography, grids, list and tables.</p>
+  </div>
+  <hr/>
+  <div id="d-br-browser-update">
+    <h2>br-browser-update</h2>
+    <p class="paragraph-content">Plugin Stand Alone that blocks user´s access who utilizes old browsers with no flexbox support.</p>
+    <h3>Usage</h3>
+    <p class="paragraph-content">Copy and past into your html the following files:</p>
+    <div class="language">
+      <code>
+        <<span class="tag-red">link</span> <span class="atribute-yellow"> rel=</span>"stylesheet" <span class="atribute-yellow"> type=</span>"text/css" <span class="atribute-yellow"> href=</span>"../br-browser-update/dist/br-browser-update.css">
+        <br/>
+        <<span class="tag-red">script</span> <span class="atribute-yellow"> type=</span>"text/javascript" <span class="atribute-yellow"> src=</span>"../br-browser-update/src/br-browser-update.js">< /<span class="tag-red">script</span>>
+      </code>
+    </div>
+  </div>
+  <hr/>
+  <div id="d-br-dropdown-list">
+    <h2>br-dropdown-list</h2>
+    <p class="paragraph-content">A dropdown list that receives an icon, text or both as title. This component inherits <span class="content-blue">br-icons</span>.</p>
+    <p class="paragraph-content">External File needed:</p>
+    <div class="language">
+      <code>
+        <<span class="tag-red">link</span> <span class="atribute-yellow">rel=</span>"import" <span class="atribute-yellow">href=</span>"src/br-dropdown-list/src/br-dropdown-list.html">
+      </code>
+    </div>
+    <h3>Tag Usage:</h3>
+    <div class="language">
+      <code>
+        <<span class="tag-red">br-dropdown-list</span>>< /<span class="tag-red">br-dropdown-list</span>>
+      </code>
+    </div>
+    <h3>Atributes</h3>
+    <ul class="atributes">
+      <li>position: type: String ("right", "left")</li>
+      <li>icon: "br-icons: iconName"</li>
+      <li>label: type: String</li>
+    </ul>
+    <div class="demo">
+      <br-dropdown-list icon="br-icons:user" class="btn"
+      options='[
+      {"label": "Minha conta", "link":"/account"},
+      {"label": "Sair", "link":"/logout"}
+      ]'></br-dropdown-list>
+
+      <br-dropdown-list label="Dropdown with label" position="right" class="btn"
+      options='[
+      {"label": "Minha conta", "link":"/account"},
+      {"label": "Sair", "link":"/logout"}
+      ]'></br-dropdown-list>
+    </div>
+  </div>
+  <hr/>
+  <div id="d-br-apps-navigation">
+    <h2>br-apps-navigation</h2>
+    <p class="paragraph-content">A menu that integrates different applications in the same system.</p>
+    <p class="paragraph-content">External File needed:</p>
+    <div class="language">
+      <code>
+        <<span class="tag-red">link</span> <span class="atribute-yellow">rel=</span>"import" <span class="atribute-yellow">href=</span>"src/br-apps-navigation/src/br-apps-navigation.html">
+      </code>
+    </div>
+    <h3>Tag Usage:</h3>
+    <div class="language">
+      <code>
+        <<span class="tag-red">br-apps-navigation</span>>< /<span class="tag-red">br-apps-navigation</span>>
+      </code>
+    </div>
+    <h3>Atributes</h3>
+    <ul class="atributes">
+      <li>button-check: Type: Boolean</li>
+      <li>Required: false</li>
+      <li>options: Type: Array of objects with name, img and link properties</li>
+      <li>Description: Collection of object with key and value to populate</li>
+    </ul>
+    <div class="demo">
+      <br-apps-navigation
+      options='[
+      {"text": "Outlook", "img":"http://azfundsh.azurewebsites.net/Assets/img/logo-outlook.png", "link":"https://outlook.office365.com"},
+      {"text": "Suporte", "img":"http://azfundsh.azurewebsites.net/Assets/img/logo-suporte.png", "link":"https://everestti.freshdesk.com"},
+      {"text": "Outlook", "img":"http://azfundsh.azurewebsites.net/Assets/img/logo-outlook.png", "link":"https://outlook.office365.com"},
+      {"text": "Suporte", "img":"http://azfundsh.azurewebsites.net/Assets/img/logo-suporte.png", "link":"https://everestti.freshdesk.com"},
+      {"text": "Outlook", "img":"http://azfundsh.azurewebsites.net/Assets/img/logo-outlook.png", "link":"https://outlook.office365.com"},
+      {"text": "Suporte", "img":"http://azfundsh.azurewebsites.net/Assets/img/logo-suporte.png", "link":"https://everestti.freshdesk.com"},
+      {"text": "Outlook", "img":"http://azfundsh.azurewebsites.net/Assets/img/logo-outlook.png", "link":"https://outlook.office365.com"},
+      {"text": "Suporte", "img":"http://azfundsh.azurewebsites.net/Assets/img/logo-suporte.png", "link":"https://everestti.freshdesk.com"},
+      {"text": "Outlook", "img":"http://azfundsh.azurewebsites.net/Assets/img/logo-outlook.png", "link":"https://outlook.office365.com"}]'
+      icon="br-icons:apps">
+    </div>
+  </div>
+  <hr/>
+  <div id="d-br-page-header">
+    <h2>br-page-header</h2>
+    <p class="paragraph-content">Custom header for current page.This component inherits <span class="content-blue">br-icons</span>.</p>
+    <p class="paragraph-content">External File needed:</p>
+    <div class="language">
+      <code>
+        <<span class="tag-red">link</span> <span class="atribute-yellow">rel=</span>"import" <span class="atribute-yellow">href=</span>"../src/br-page-header/src/br-page-header.html">
+      </code>
+    </div>
+    <h3>Tag Usage:</h3>
+    <div class="language">
+      <code>
+        <<span class="tag-red">br-page-header</span>>< /<span class="tag-red">br-page-header</span>>
+      </code>
+    </div>
+    <h3>Atributes</h3>
+    <ul class="atributes">
+      <li>text: type:String ("Page Title")</li>
+      <li>icon: "br-icons: iconName"</li>
+      <li>tooltip: type: String ("Tooltip Text")</li>
+    </ul>
+    <div class="demo">
+      <br-page-header text="Page title" icon="br-icons:globe" tooltip="Mensagem do tooltip"></br-page-header>
+    </div>
+  </div>
+  <hr/>
+  <div id="d-br-icons">
+    <h2>br-icons</h2>
+    <p class="paragraph-content">A set of icons made with iron-iconset provided by Polymer 1.0</p>
+    <p class="paragraph-content">External File needed:</p>
+    <div class="language">
+      <code>
+        <<span class="tag-red">link</span> <span class="atribute-yellow">rel=</span>"import" <span class="atribute-yellow">href=</span>"../src/br-icons/src/br-icons.html">
+      </code>
+    </div>
+    <ul class="atributes">
+      <li>iron-icon.html downloaded from polymer components page.</li>
+      <li>iron-iconset-svg.html downloaded from polymer components page</li>
+    </ul>
+    <h3>Tag Usage:</h3>
+    <div class="language">
+      <code>
+        <<span class="tag-red">br-icons</span>>< /<span class="tag-red">br-icons</span>>
+      </code>
+    </div>
+    <h3>Atributes</h3>
+    <ul class="atributes">
+      <li>class: String (icon__2lg, icon__lg, icon__sm, icon__md)</li>
+      <li>icon: "br-icons:iconName" <a href="#d-br-icons" onclick="document.querySelector('.icon-modal')._open()">Full list of icons available here</a></li>
+    </ul>
+    <br-modal class="icon-modal">
+    <div class="body">
+      <h2>Icon List</h2>
+      <div class="row">
+        <div class="col-sm-4 col-md-3 col-lg-2">
+          <br-icons class="icon_2lg" icon="br-icons:mail"></br-icons>
+        </div>
+        <div class="col-sm-4 col-md-3 col-lg-2">
+          <br-icons class="icon__lg" icon="br-icons:apps"></br-icons>
+        </div>
+        <div class="col-sm-4 col-md-3 col-lg-2">
+          <br-icons class="icon__lg" icon="br-icons:arrow-back"></br-icons>
+        </div>
+        <div class="col-sm-4 col-md-3 col-lg-2">
+          <br-icons class="icon__lg" icon="br-icons:check"></br-icons>
+        </div>
+        <div class="col-sm-4 col-md-3 col-lg-2">
+          <br-icons class="icon__lg" icon="br-icons:close"></br-icons>
+        </div>
+        <div class="col-sm-4 col-md-3 col-lg-2">
+          <br-icons class="icon__lg" icon="br-icons:fullscreen"></br-icons>
+        </div>
+        <div class="col-sm-4 col-md-3 col-lg-2">
+          <br-icons class="icon__lg" icon="br-icons:fullscreen-exit"></br-icons>
+        </div>
+        <div class="col-sm-4 col-md-3 col-lg-2">
+          <br-icons class="icon__lg" icon="br-icons:menu"></br-icons>
+        </div>
+        <div class="col-sm-4 col-md-3 col-lg-2">
+          <br-icons class="icon__lg" icon="br-icons:user"></br-icons>
+        </div>
+        <div class="col-sm-4 col-md-3 col-lg-2">
+          <br-icons class="icon__lg" icon="br-icons:save"></br-icons>
+        </div>
+        <div class="col-sm-4 col-md-3 col-lg-2">
+          <br-icons class="icon__lg" icon="br-icons:refresh"></br-icons>
+        </div>
+        <div class="col-sm-4 col-md-3 col-lg-2">
+          <br-icons class="icon__lg" icon="br-icons:search"></br-icons>
+        </div>
+        <div class="col-sm-4 col-md-3 col-lg-2">
+          <br-icons class="icon__lg" icon="br-icons:settings"></br-icons>
+        </div>
+        <div class="col-sm-4 col-md-3 col-lg-2">
+          <br-icons class="icon__lg" icon="br-icons:shield-check"></br-icons>
+        </div>
+        <div class="col-sm-4 col-md-3 col-lg-2">
+          <br-icons class="icon__lg" icon="br-icons:tablet-financial"></br-icons>
+        </div>
+        <div class="col-sm-4 col-md-3 col-lg-2">
+          <br-icons class="icon__lg" icon="br-icons:money-house"></br-icons>
+        </div>
+        <div class="col-sm-4 col-md-3 col-lg-2">
+          <br-icons class="icon__lg" icon="br-icons:candle-chart"></br-icons>
+        </div>
+        <div class="col-sm-4 col-md-3 col-lg-2">
+          <br-icons class="icon__lg" icon="br-icons:bar-chart1"></br-icons>
+        </div>
+        <div class="col-sm-4 col-md-3 col-lg-2">
+          <br-icons class="icon__lg" icon="br-icons:line-bar-chart1"></br-icons>
+        </div>
+        <div class="col-sm-4 col-md-3 col-lg-2">
+          <br-icons class="icon__lg" icon="br-icons:line-chart1"></br-icons>
+        </div>
+        <div class="col-sm-4 col-md-3 col-lg-2">
+          <br-icons class="icon__lg" icon="br-icons:line-bar-chart2"></br-icons>
+        </div>
+        <div class="col-sm-4 col-md-3 col-lg-2">
+          <br-icons class="icon__lg" icon="br-icons:donut-chart1"></br-icons>
+        </div>
+        <div class="col-sm-4 col-md-3 col-lg-2">
+          <br-icons class="icon__lg" icon="br-icons:bar-chart2"></br-icons>
+        </div>
+        <div class="col-sm-4 col-md-3 col-lg-2">
+          <br-icons class="icon__lg" icon="br-icons:area-chart1"></br-icons>
+        </div>
+        <div class="col-sm-4 col-md-3 col-lg-2">
+          <br-icons class="icon__lg" icon="br-icons:line-chart2"></br-icons>
+        </div>
+        <div class="col-sm-4 col-md-3 col-lg-2">
+          <br-icons class="icon__lg" icon="br-icons:pie-chart1"></br-icons>
+        </div>
+        <div class="col-sm-4 col-md-3 col-lg-2">
+          <br-icons class="icon__lg" icon="br-icons:coins1"></br-icons>
+        </div>
+        <div class="col-sm-4 col-md-3 col-lg-2">
+          <br-icons class="icon__lg" icon="br-icons:chart-pc"></br-icons>
+        </div>
+        <div class="col-sm-4 col-md-3 col-lg-2">
+          <br-icons class="icon__lg" icon="br-icons:search-money"></br-icons>
+        </div>
+        <div class="col-sm-4 col-md-3 col-lg-2">
+          <br-icons class="icon__lg" icon="br-icons:piggy1"></br-icons>
+        </div>
+        <div class="col-sm-4 col-md-3 col-lg-2">
+          <br-icons class="icon__lg" icon="br-icons:shield-money"></br-icons>
+        </div>
+        <div class="col-sm-4 col-md-3 col-lg-2">
+          <br-icons class="icon__lg" icon="br-icons:wallet1"></br-icons>
+        </div>
+        <div class="col-sm-4 col-md-3 col-lg-2">
+          <br-icons class="icon__lg" icon="br-icons:globe"></br-icons>
+        </div>
+        <div class="col-sm-4 col-md-3 col-lg-2">
+          <br-icons class="icon icon__lg icon__spin" icon="br-icons:loading"></br-icons>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <br-button class="medium primary" onclick="document.querySelector('br-modal')._close()" label="Awesome!!"></br-button>
+    </div>
+  </br-modal>
+</div>
+<hr/>
+<div id="d-br-select-box">
+  <h2>br-select-box</h2>
+  <p class="paragraph-content">Mobile-friendly wrapper for br-select</p>
+</div>
+<hr/>
+<div id="d-br-select">
+  <h2>br-select</h2>
+  <p class="paragraph-content">A mobile-friendly select box component with search and multi select options It needs br-select-box component to work.</p>
+  <p class="paragraph-content">External File needed:</p>
+  <div class="language">
+    <code>
+      <<span class="tag-red">link</span> <span class="atribute-yellow">rel=</span>"import" <span class="atribute-yellow">href=</span>"/src/br-select/src/br-select.html">
+    </code>
+  </div>
+  <h3>Tag Usage:</h3>
+  <div class="language">
+    <code>
+      <<span class="tag-red">br-select</span>>< /<span class="tag-red">br-select</span>>
+    </code>
+  </div>
+  <h3>Atributes</h3>
+  <ul class="atributes">
+    <li>model: Type: Array</li>
+    <li>options: Type: Array</li>
+    <li>Required: Type: Boolean</li>
+    <li>multiselect: Type: Boolean</li>
+    <li>Desription: Set if br-selectbox is multiselect.</li>
+    <li>Default value: false</li>
+  </ul>
+  <div class="demo">
+    <br-select model={{value}} label="Select Your Option" options='[{"key": 1, "value": "Judith"}, {"key": 2, "value": "Marie"}, {"key": 3, "value": "Joseph"}, {"key": 4, "value": "John"}]'> </br-select>
+  </div>
+</div>
+<hr/>
+<div id="d-br-modal">
+  <h2>br-modal</h2>
+  <p class="paragraph-content">A modal wrapper fired by on-click event</p>
+  <p class="paragraph-content">External File needed:</p>
+  <div class="language">
+    <code>
+      <<span class="tag-red">link</span> <span class="atribute-yellow">rel=</span>"import" <span class="atribute-yellow">href=</span>"/src/br-modal/src/br-modal.html">
+    </code>
+  </div>
+  <h3>Tag Usage:</h3>
+  <div class="language">
+    <code>
+      <<span class="tag-red">br-modal</span>>
+      <br/>
+      <<span class="tag-red">div</span> <span class="atribute-yellow">class=</span>"body">Modal Body < /<span class="tag-red">div</span>>
+      <br/>
+      <<span class="tag-red">div</span> <span class="atribute-yellow">class=</span>"footer">Modal Footer < /<span class="tag-red">div</span>>
+      <br/>
+      < /<span class="tag-red">br-modal</span>>
+    </code>
+  </div>
+  <h3>Atributes</h3>
+  <ul class="atributes">
+    <li>model: Type: Array</li>
+    <li>options: Type: Array</li>
+    <li>Required: Type: Boolean</li>
+    <li>multiselect: Type: Boolean</li>
+    <li>Desription: Set if br-selectbox is multiselect.</li>
+    <li>Default value: false</li>
+  </ul>
+  <div class="demo">
+    <a href="#d-br-modal" onclick="document.querySelector('.demo-modal')._open()">Click me!</a>
+    <br-modal class="demo-modal">
+    <div class="body">
+      <div class="modal-icon">
+        <br-icons icon="br-icons:check"></br-icons>
+      </div>
+      <p class="paragraph-content">Todos as descrições das pessoas são sobre a humanidade do atendimento, a pessoa pega no pulso, examina, olha com carinho.</p>
+    </div>
+    <div class="footer">
+      <br-button class="small primary" onclick="document.querySelector('.demo-modal')._close()" label="Got it!"></br-button>
+    </div>
+  </br-modal>
+</div>
+</div>
+<hr/>
+<div id="d-br-input">
+  <h2>br-input</h2>
+  <p class="paragraph-content">Input custom Tag. This component inherits <span class="content-blue">br-icons</span>. </p>
+  <p class="paragraph-content">External File needed:</p>
+  <div class="language">
+    <code>
+      <<span class="tag-red">link</span> <span class="atribute-yellow">rel=</span>"import" <span class="atribute-yellow">href=</span>"/src/br-input/src/br-input.html">
+    </code>
+  </div>
+  <h3>Tag Usage:</h3>
+  <div class="language">
+    <code>
+      <<span class="tag-red">br-input</span>>< /<span class="tag-red">br-input</span>>
+    </code>
+  </div>
+  <h3>Atributes</h3>
+  <ul class="atributes">
+    <li>Name: String</li>
+    <li>Label: String</li>
+    <li>Model: 'SomeValue'?</li>
+    <li>Min, max: Defines min/max field's caracthers</li>
+    <li>is-valid: String true or false (why?)</li>
+    <li>not-empty-error-message: String</li>
+    <li>min-length-error-message: String</li>
+    <li>custom-error-message: String</li>
+    <li>required: Used makes the field required</li>
+  </ul>
+  <div class="demo">
+    <br-input
+    name="teste"
+    label="Input with icon"
+    format="number"
+    model="{{value}}"
+    min="3"
+    max="5"
+    is-valid="false"
+    not-empty-error-message="Este campo é obrigatório"
+    min-length-error-message="Este campo requer um mínimo de 3 caractéres"
+    custom-error-message="Deu erro na bagaça doida"
+    required
+    icon="br-icons:search"
+    ></br-input>
+    <br-input
+    name="sese"
+    label="Input without icon"
+    format="number"
+    model="{{value}}"
+    min="3"
+    max="5"
+    is-valid="false"
+    not-empty-error-message="Este campo é obrigatório"
+    min-length-error-message="Este campo requer um mínimo de 3 caractéres"
+    custom-error-message="Deu erro na bagaça doida"
+    required
+    ></br-input>
+  </div>
+</div>
+</div>
+<hr/>
+<div id="d-br-checkable">
+  <h2>br-checkable</h2>
+  <p class="paragraph-content">Checkbox and radio inputs.This component inherits <span class="content-blue">br-icons</span>.</p>
+  <p class="paragraph-content">External File needed:</p>
+  <div class="language">
+    <code>
+      <<span class="tag-red">link</span> <span class="atribute-yellow">rel=</span>"import" <span class="atribute-yellow">href=</span>"/src/br-checkable/src/br-checkable.html">
+    </code>
+  </div>
+  <h3>Tag Usage:</h3>
+  <div class="language">
+    <code>
+      <<span class="tag-red">br-chackable</span>>< /<span class="tag-red">br-chackable</span>>
+    </code>
+  </div>
+  <h3>Atributes</h3>
+  <ul class="atributes">
+    <li>label: String,</li>
+    <li>checkbox: Boolean,</li>
+    <li>radio: Boolean,</li>
+    <li>name: String, In case of radio group</li>
+    <li>required: Boolean,</li>
+    <li>errorMessage: String,</li>
+  </ul>
+  <div class="demo">
+    <br-checkable checkbox label="Checkbox test"></br-checkable>
+
+    <br-checkable radio required label="Radio test"></br-checkable>
+
+    <br-checkable radio label="Radio group test 01" name="group"></br-checkable>
+    <br-checkable radio label="Radio group test 02" name="group"></br-checkable>
+  </div>
+</div>
+<hr/>
+<div id="d-br-button">
+  <h2>br-button</h2>
+  <p class="paragraph-content">A custom button made with Polymer.</p>
+  <p class="paragraph-content">External File needed:</p>
+  <div class="language">
+    <code>
+      <<span class="tag-red">link</span> <span class="atribute-yellow">rel=</span>"import" <span class="atribute-yellow">href=</span>"/src/br-button/src/br-button.html">
+    </code>
+  </div>
+  <h3>Tag Usage:</h3>
+  <div class="language">
+    <code>
+      <<span class="tag-red">br-button</span>>< /<span class="tag-red">br-button</span>>
+    </code>
+  </div>
+  <h3>Atributes</h3>
+  <ul class="atributes">
+    <li>Class: small, large</li>
+    <li>Label: Label name</li>
+    <li>icon: iconUrl</li>
+    <li>is-disabled: If assigned to a br-button tag, it creates a disabled button</li>
+  </ul>
+  <div class="demo">
+    <br-button class="small" label="Botão pequeno" icon="br-icons:user"></br-button>
+    <br-button label="Botão normal" icon="br-icons:user"></br-button>
+    <br-button class="large" label="Botão grande" icon="br-icons:user"></br-button>
+    <br-button label="Botão desabilitado" icon="br-icons:user" disabled></br-button>
+
+    <br>
+    <br>
+
+    <br-button class="primary small" label="Botão pequeno" icon="br-icons:user"></br-button>
+    <br-button class="primary" label="Botão normal" icon="br-icons:user" id="teste" is-loading></br-button>
+    <br-button class="primary large" label="Botão grande" icon="br-icons:user"></br-button>
+    <br-button class="primary" label="Botão desabilitado" icon="br-icons:user" disabled></br-button>
+  </div>
+</div>
+<hr/>
+<div id="d-br-form">
+  <h2>br-form</h2>
+  <p class="paragraph-content">A wrap for br-input, br-checkable and br-button, making viable build entire forms with our custom elements.</p>
+  <p class="paragraph-content">External File needed:</p>
+  <div class="language">
+    <code>
+      <<span class="tag-red">link</span> <span class="atribute-yellow">rel=</span>"import" <span class="atribute-yellow">href=</span>"/src/br-form/src/br-form.html">
+    </code>
+  </div>
+  <h3>Tag Usage:</h3>
+  <div class="language">
+    <code>
+      <<span class="tag-red">br-form</span>>< /<span class="tag-red">br-form</span>>
+    </code>
+  </div>
+  <h3>Atributes</h3>
+  <ul class="atributes">
+    <li>action: String,</li>
+    <li>autocomplete: String,</li>
+    <li>method: String</li>
+  </ul>
+  <div class="demo">
+    <br-form action="" autocomplete="on" method="POST">
+    <br-input
+    name="teste"
+    id="test1"
+    label="Input with icon"
+    format="number"
+    model="{{value}}"
+    min="3"
+    max="5"
+    is-valid="false"
+    not-empty-error-message="Este campo é obrigatório"
+    min-length-error-message="Este campo requer um mínimo de 3 caractéres"
+    custom-error-message="Deu erro na bagaça doida"
+    required
+    id="br-teste"
+    icon="br-icons:search"
+    ></br-input>
+
+    <br-input
+    name="sese"
+    id="test2"
+    label="Input without icon"
+    format="number"
+    model="{{value}}"
+    min="3"
+    max="5"
+    is-valid="false"
+    not-empty-error-message="Este campo é obrigatório"
+    min-length-error-message="Este campo requer um mínimo de 3 caractéres"
+    custom-error-message="Deu erro na bagaça doida"
+    required
+    ></br-input>
+
+    <br-button class="accent" label="Botão normal" ></br-button>
+  </br-form>
+</div>
+</div>
+<hr/>
+<div id="d-br-nav">
+  <h2>br-nav</h2>
+  <p class="paragraph-content">A mobile-friendly on click side menu with "sandwich" icon</p>
+  <p class="paragraph-content">External File needed:</p>
+  <div class="language">
+    <code>
+      <<span class="tag-red">link</span> <span class="atribute-yellow">rel=</span>"import" <span class="atribute-yellow">href=</span>"/src/br-nav/src/br-nav.html">
+    </code>
+  </div>
+  <h3>Tag Usage:</h3>
+  <div class="language">
+    <code>
+      <<span class="tag-red">br-nav</span>>< /<span class="tag-red">br-nav</span>>
+    </code>
+  </div>
+  <h3>Atributes</h3>
+  <ul class="atributes">
+    <li>itens: Type: Array,</li>
+  </ul>
+</div>
+<hr/>
+<div id="d-br-header">
+  <h2>br-header</h2>
+  <p class="paragraph-content">A header wrap divided by content position</p>
+  <p class="paragraph-content">External File needed:</p>
+  <div class="language">
+    <code>
+      <<span class="tag-red">link</span> <span class="atribute-yellow">rel=</span>"import" <span class="atribute-yellow">href=</span>"/src/br-header/src/br-header.html">
+    </code>
+  </div>
+  <h3>Tag Usage:</h3>
+  <div class="language">
+    <code>
+      <<span class="tag-red">br-header</span>>< /<span class="tag-red">br-header</span>>
+    </code>
+  </div>
+  <hr/>
+  <div id="d-br-search">
+    <h2>br-search</h2>
+    <p class="paragraph-content">Search input field</p>
+    <p class="paragraph-content">External File needed:</p>
+    <div class="language">
+      <code>
+        <<span class="tag-red">link</span> <span class="atribute-yellow">rel=</span>"import" <span class="atribute-yellow">href=</span>"/src/br-search/src/br-search.html">
+      </code>
+    </div>
+    <h3>Tag Usage:</h3>
+    <div class="language">
+      <code>
+        <<span class="tag-red">br-search</span>>< /<span class="tag-red">br-search</span>>
+      </code>
+    </div>
+  </div>
+  <hr/>
+  <div id="d-br-page">
+    <h2>br-page</h2>
+    <p class="paragraph-content">framework´s Page model with navbar, apps navigation, input search and body It has dependency on br-nav, br-apps-navigation, br-search, br-icons, br-dropdown-list, br-button, br-page-header, br-header, br-input</p>
+    <p class="paragraph-content">External File needed:</p>
+    <div class="language">
+      <code>
+        <<span class="tag-red">link</span> <span class="atribute-yellow">rel=</span>"import" <span class="atribute-yellow">href=</span>"/src/br-page/src/br-page.html">
+      </code>
+    </div>
+    <h3>Tag Usage:</h3>
+    <div class="language">
+      <code>
+        <<span class="tag-red">br-page</span>>< /<span class="tag-red">br-page</span>>
+      </code>
+    </div>
+    <h3>Atributes</h3>
+    <ul class="atributes">
+      <li>navOptions: Array</li>
+      <li>apps: Array</li>
+      <li>accountOptions: Array</li>
+    </ul>
+    <div class="demo">
+      <a href="/page" target="_blank">To access this demo, click here pandwa!</a>
+    </div>
+  </div>
+</section>
+<footer id="get-it" class="get-it">
+  <h2>And this is all folks!</h2>
+  <h3>Visit our <a href="https://github.com/bed-rock">github</a> page and download the Bedrock project</h3>
+</footer>
+</body>
+</html>

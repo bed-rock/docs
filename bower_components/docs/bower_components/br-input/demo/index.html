@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script src="../../webcomponentsjs/webcomponents-lite.min.js"></script>
+	<link rel="stylesheet" href="../../bedrock/dist/css/style.css">
+	<link rel="import" href="../src/br-input.html">
+</head>
+<body>
+	<br><br>
+	<div class="container">
+		<h1>br-input <small>example</small></h1>
+		<div class="row">
+			<div class="col-sm-4">
+				<br-input
+					name="teste"
+					label="Input with icon"
+					format="number"
+					model="{{value}}"
+					min="3"
+					max="5"
+					is-valid="false"
+					not-empty-error-message="Este campo é obrigatório"
+					min-length-error-message="Este campo requer um mínimo de 3 caractéres"
+					custom-error-message="Deu erro na bagaça doida"
+					required
+					icon="br-icons:search"
+				></br-input>
+			</div>
+			<div class="col-sm-4">
+				<br-input
+					name="sese"
+					label="Input without icon"
+					format="number"
+					model="{{value}}"
+					min="3"
+					max="5"
+					is-valid="false"
+					not-empty-error-message="Este campo é obrigatório"
+					min-length-error-message="Este campo requer um mínimo de 3 caractéres"
+					custom-error-message="Deu erro na bagaça doida"
+					required
+				></br-input>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

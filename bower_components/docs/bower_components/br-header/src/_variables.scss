@@ -1,0 +1,15 @@
+$header-background: $color-white-10;
+$header-height: 56px;
+$header-link-color: darken($header-background, 40%);
+
+// Input
+//
+$input-border-width: 0;
+$input-border-color: transparent;
+$input-backgroung-color: darken(#fff, 4%);
+
+$input-border-color-hover: transparent;
+$input-backgroung-color-hover: #fff;
+
+$input-border-color-focus: #fff;
+$input-backgroung-color-focus: #fff;

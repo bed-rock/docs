@@ -4,13 +4,12 @@
 
 
 <dom-module id="br-form">
-<link rel="import" type="css" href="../dist/css/br-form.css">
 
 <template>
-  <form action="{{action}}" autocomplete="{{autocomplete}}" method="{{method}}" on-keypress="_checkValidity">
-  
+  <form action="{{action}}" autocomplete="{{autocomplete}}" method="{{method}}" on-keyup="_checkValidity">
+
     <content></content>
-    
+
   </form>
 
 </template>
@@ -29,14 +28,14 @@
       allTrue = false;
       isSomeoneFalse = false;
       for (var i = 0; i < allBrInputElements.length; i++) {
-        if (allBrInputElements[i].isValid == 'true') {
+        if (allBrInputElements[i].isValid == true) {
           allTrue = true
         } else{
           isSomeoneFalse = true;
         }
       };
       if (isSomeoneFalse == false && allTrue == true) {
-        var buttonSubmit = document.querySelector('br-button');
+        var buttonSubmit = document.getElementById('button-submit');
         buttonSubmit.removeAttribute('disabled');
       };
     }

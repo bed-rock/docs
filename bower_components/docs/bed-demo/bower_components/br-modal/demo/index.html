@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>br-modal demo</title>
+	<meta name="description" content="">
+
+  <link rel="stylesheet" href="../../bedrock/dist/css/style.css">
+
+  <!-- Mobile -->
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+
+  <!-- Web Components -->
+  <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="import" href="../src/br-modal.html">
+</head>
+<body>
+
+  <a href="#" onclick="document.querySelector('br-modal')._open()">Click me!</a>
+
+  <br-modal>
+    <div class="body">
+      <div class="modal-icon">
+        <br-icons icon="br-icons:check"></br-icons>
+      </div>
+      <p>Todos as descrições das pessoas são sobre a humanidade do atendimento, a pessoa pega no pulso, examina, olha com carinho.</p>  
+    </div>
+    <div class="footer">
+      <br-button class="small primary" onclick="document.querySelector('br-modal')._close()" label="Got it!"></br-button>
+    </div>
+  </br-modal>
+
+</body>
+
+</html>

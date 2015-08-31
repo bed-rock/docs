@@ -1,0 +1,113 @@
+@import '../../bedrock/scss/variables';
+@import 'variables';
+
+:host {
+  display: flex;
+  flex-basis: $header-height;
+  background: $header-background;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 100%;
+
+  ::content {
+
+    .group {
+      display: flex;
+      align-items: stretch;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      height: $header-height;
+      flex-shrink: 0;
+
+      &__left {
+        @extend .group;
+      }
+
+      &__center {
+        @extend .group;
+        flex-grow: 1;
+      }
+
+      &__right {
+        @extend .group;
+      }
+    }
+
+    .logo {
+      @extend .btn;
+      display: none !important;
+
+      @media (min-width: $screen-phone) {
+        display: flex !important;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+        max-height: $header-height - 16;
+      }
+    }
+
+    .btn {
+      position: relative;
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+      min-width: 56px;
+      padding: 0 1rem;
+      color: $header-link-color;
+      color: $header-link-color;
+      text-decoration: none;
+      appearance: none;
+      cursor: pointer;
+      background: none;
+      border: none;
+
+      &:hover {
+        color: darken( $header-link-color, 40% );
+        background: rgba(black, 0.1);
+        text-decoration: none;
+      }
+
+    }
+
+    .btn__search {
+      @extend .btn;
+      @media (min-width: $screen-tablet + 1) {
+        display: none !important;
+      }
+    }
+
+    .input__search {
+      display: none;
+
+      @media (min-width: $screen-tablet + 1) {
+        display: flex;
+        flex-grow: 1;
+        align-self: center;
+        margin: 0 1rem;
+        max-width: 600px;
+        height: $header-height - 16;
+        line-height: $header-height - 16;
+        text-indent: 1rem;
+        border-radius: 2px;
+        background: $input-backgroung-color;
+        box-shadow: none;
+        transition: $transition;
+
+        &:hover {
+          background: $input-backgroung-color-hover;
+        }
+        &:focus {
+          background: $input-backgroung-color-focus;
+          box-shadow: none;
+        }
+      }
+
+    }
+
+  }
+
+}

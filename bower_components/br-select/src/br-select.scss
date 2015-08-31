@@ -3,13 +3,14 @@
 // Component name: br-selectbox
 // ===============================
 
-@import '../../bedrock-base/scss/variables';
+@import '../../bedrock/scss/variables';
 @import 'variables';
 
 
 :host {
-  display: block;
+  display: flex;
   position: relative;
+  width: 100%;
   user-select: none;
 }
 

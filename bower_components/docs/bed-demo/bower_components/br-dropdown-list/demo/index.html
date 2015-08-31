@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>br-dropdown-list</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../../bedrock/dist/css/style.css">
+	<link rel="stylesheet" href="../../br-buttons/dist/css/br-button.css">
+
+	<script src="../../webcomponentsjs/webcomponents-lite.min.js"></script>
+	<link rel="import" href="../src/br-dropdown-list.html">
+
+</head>
+<body>
+
+	<div class="container">
+
+		<h1>br-dropdown-list example</h1>
+
+<!--
+Usage:
+Tag: <br-dropdown-list></br-dropdown-list>
+Attributes:
+position="right" // Align br-select-box in right
+icon="br-icons:user"
+label="Label example"
+-->
+
+<br-dropdown-list icon="br-icons:user" class="btn"
+  options='[
+  {"label": "Minha conta", "link":"/account"},
+  {"label": "Sair", "link":"/logout"}
+  ]'></br-dropdown-list>
+
+  <br>
+  <br>
+  <br>
+
+  <br-dropdown-list label="Dropdown with label" position="right" class="btn"
+  options='[
+  {"label": "Minha conta", "link":"/account"},
+  {"label": "Sair", "link":"/logout"}
+  ]'></br-dropdown-list>
+
+</div>
+
+</body>
+</html>

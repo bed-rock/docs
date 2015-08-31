@@ -1,0 +1,37 @@
+{
+  "name": "br-dropdown-list",
+  "version": "1.0.1",
+  "homepage": "https://github.com/bed-rock/br-dropdown-list",
+  "authors": [
+    "cbfranca <cleidsonbf@gmail.com>"
+  ],
+  "description": "a dropdown-list built with polymer",
+  "main": "br-dropdown-list.html",
+  "keywords": [
+    "dropdownlist",
+    "dropdown",
+    "select"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bedrock-base": "~1.0.0",
+    "br-select-box": "~1.0.0",
+    "br-icons": "~1.0.0"
+  },
+  "_release": "1.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.0.1",
+    "commit": "2d55c07cc32608eab6cfd428c11bf24580f466e4"
+  },
+  "_source": "git://github.com/bed-rock/br-dropdown-list.git",
+  "_target": "~1.0.0",
+  "_originalSource": "br-dropdown-list"
+}

@@ -1,0 +1,56 @@
+<link rel="import" type="html" href="../../polymer/polymer.html">
+<link rel="import" type="html" href="../../br-icons/src/br-icons.html">
+
+<dom-module id="br-button">
+  <link rel="import" type="css" href="../dist/css/br-button.css">
+
+  <template>
+
+    <template is="dom-if" if="{{icon}}">
+      <br-icons icon$="{{icon}}" class="icon" hidden$="{{isLoading}}"></br-icons>
+
+      <template is="dom-if" if="{{isLoading}}">
+        <br-icons icon="br-icons:loading" class="icon icon__spin"></br-icons>
+      </template>
+    </template>
+
+    <template is="dom-if" if="{{label}}">{{label}}</template>
+
+  </template>
+
+  <script>
+    Polymer({
+      is: 'br-button',
+
+      properties: {
+        label: String,
+        icon: String,
+        isLoading: {
+          type: Boolean,
+          observer: '_isLoading'
+        },
+        isDisabled:{
+          type: Boolean,         
+          observer: '_isDisabled'
+        }
+      },
+
+      _isLoading: function() {
+        this._toggleDisable(this.isLoading);          
+      },
+
+      _isDisabled: function(){
+        this._toggleDisable(this.isDisabled);          
+      },
+
+      _toggleDisable: function(condition){
+        if(condition)
+          this.setAttribute('disabled', true);
+        else
+          this.removeAttribute('disabled');
+      }
+
+
+    });
+  </script>
+</dom-module>

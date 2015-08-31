@@ -1,0 +1,38 @@
+{
+  "name": "br-checkable",
+  "homepage": "https://github.com/bed-rock/br-checkable",
+  "authors": [
+    "cbfranca <cleidsonbf@gmail.com>",
+    "marcelo-ribeiro <marceloribeiromidia@gmail.com>"
+  ],
+  "description": "A mobile-friendly select box web component with search and multi select built with polymer",
+  "main": "br-checkable.html",
+  "keywords": [
+    "webcomponents",
+    "polymer",
+    "checkbox",
+    "radio",
+    "input"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bedrock-base": "*"
+  },
+  "_release": "90236bcd92",
+  "_resolution": {
+    "type": "branch",
+    "branch": "develop",
+    "commit": "90236bcd92b55b1927198efbc0de2f9c1aa8c82f"
+  },
+  "_source": "git@github.com:bed-rock/br-checkable.git",
+  "_target": "develop",
+  "_originalSource": "git@github.com:bed-rock/br-checkable.git",
+  "_direct": true
+}

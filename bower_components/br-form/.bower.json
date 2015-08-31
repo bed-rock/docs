@@ -26,14 +26,13 @@
     "br-input": "~1.0.0"
   },
   "homepage": "https://github.com/bed-rock/br-form",
-  "_release": "73a3eabb4a",
+  "_release": "c44f1942c3",
   "_resolution": {
     "type": "branch",
     "branch": "develop",
-    "commit": "73a3eabb4ab0c6f95f8388514fdc8c6a82b819e9"
+    "commit": "c44f1942c3e5a26e2342c95d55413bd9a30cf159"
   },
   "_source": "git@github.com:bed-rock/br-form.git",
   "_target": "develop",
-  "_originalSource": "git@github.com:bed-rock/br-form.git",
-  "_direct": true
+  "_originalSource": "git@github.com:bed-rock/br-form.git"
 }

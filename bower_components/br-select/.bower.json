@@ -27,14 +27,13 @@
     "br-select-box": "~1.0.0",
     "br-icons": "~1.0.0"
   },
-  "_release": "df8fbdb6a7",
+  "_release": "71367ec765",
   "_resolution": {
     "type": "branch",
     "branch": "develop",
-    "commit": "df8fbdb6a730bb34d94ad4d7a9dbac86044608f5"
+    "commit": "71367ec765667b59fc2f609f3b3f1290d1e76e26"
   },
   "_source": "git@github.com:bed-rock/br-select.git",
   "_target": "develop",
-  "_originalSource": "git@github.com:bed-rock/br-select.git",
-  "_direct": true
+  "_originalSource": "git@github.com:bed-rock/br-select.git"
 }

@@ -1,0 +1,27 @@
+{
+  "name": "br-header",
+  "version": "1.0.1",
+  "authors": [
+    "cbfranca <cleidsonbf@gmail.com>",
+    "marcelo-ribeiro <marceloribeiromidia@gmail.com>"
+  ],
+  "description": "",
+  "main": "br-header.html",
+  "keywords": [
+    "webcomponents",
+    "polymer",
+    "bedrock",
+    "header"    
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+   "dependencies": {
+    "bedrock-base": "~1.0.0"
+  }
+}

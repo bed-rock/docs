@@ -1,5 +1,6 @@
 {
   "name": "bedrock-base",
+  "version": "1.0.1",
   "authors": [
     "marcelo-ribeiro <marceloribeiromidia@gmail.com>",
     "cbfranca <cleidsonbf@gmail.com>"
@@ -20,14 +21,13 @@
     "tests"
   ],
   "homepage": "https://github.com/bed-rock/bedrock",
-  "_release": "93e5e69a55",
+  "_release": "1.0.1",
   "_resolution": {
-    "type": "branch",
-    "branch": "develop",
-    "commit": "93e5e69a55b24c66789ce35edc120ca1833566cf"
+    "type": "version",
+    "tag": "1.0.1",
+    "commit": "9375bfe4ad1a5d2ff18e01035fa60f159ecdce93"
   },
-  "_source": "git@github.com:bed-rock/bedrock.git",
-  "_target": "develop",
-  "_originalSource": "git@github.com:bed-rock/bedrock.git",
-  "_direct": true
+  "_source": "git://github.com/bed-rock/bedrock.git",
+  "_target": "*",
+  "_originalSource": "bedrock-base"
 }
