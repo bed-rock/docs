@@ -1,7 +1,4 @@
 <link rel="import" type="html" href="../../polymer/polymer.html">
-<link rel="import" type="html" href="../../br-button/src/br-button.html">
-<link rel="import" type="html" href="../../br-input/src/br-input.html">
-
 
 <dom-module id="br-form">
 
@@ -24,7 +21,7 @@
       method: String
     },
     _checkValidity: function () {
-      allBrInputElements = document.getElementsByTagName('br-input');
+      allBrInputElements = Polymer.dom(this).querySelectorAll('br-input');
       allTrue = false;
       isSomeoneFalse = false;
       for (var i = 0; i < allBrInputElements.length; i++) {
